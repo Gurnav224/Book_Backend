@@ -18,6 +18,11 @@ app.use(cors(corsOption))
 
 app.use(express.json());
 
+
+app.get('/', (req,res) => {
+  res.send('book server is running')
+})
+
 // Create an API with route "/books" to create a new book data in the books Database.
 async function createBook(book) {
   try {
